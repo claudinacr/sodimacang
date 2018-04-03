@@ -21,12 +21,24 @@ export class ProductsComponent implements OnInit {
 
     let menuProducts = document.querySelector('.menuProducts')
 
-    console.log(this)
+  
     muebles.addEventListener('click', function () {
-      
+      fetch('https://api.mercadolibre.com/sites/MLC/categories', {
+  method: 'GET',
+  mode: 'cors',
+  headers: {
+    'Access-Control-Allow-Origin': '*'
+  }
+})
+  .then(function(respt) {
+    return respt.json();
+  })
+  .then(function(data) {
+    console.log(data);
+  })
     })
 
-    cocinas.addEventListener('click', function () {
+   /*  cocinas.addEventListener('click', function () {
 
     })
 
@@ -49,7 +61,7 @@ export class ProductsComponent implements OnInit {
     ninos.addEventListener('click', function () {
 
     })
-
+ */
 
 
 
