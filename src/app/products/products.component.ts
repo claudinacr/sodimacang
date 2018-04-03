@@ -20,6 +20,63 @@ export class ProductsComponent implements OnInit {
 
     let menuProducts = document.querySelector('.menuProducts')
 
+
+
+      fetch('https://api.mercadolibre.com/sites/MLC/search?category=MLC178483', {
+        method: 'GET',
+        mode: 'cors',
+        headers: {
+          'Access-Control-Allow-Origin': '*'
+        }
+      })
+        .then(function (respt) {
+          return respt.json();
+        })
+        .then(function (data) {
+          console.log(data);
+
+          let container = document.querySelector('.container');
+          container.innerHTML='';
+          for (let i = 0; i < data.results.length; i++) {
+            let box = document.createElement('div');
+            box.className = 'box';
+            box.style.border = '1px blue solid';
+            box.style.background = 'pink';
+            box.style.width = '15em';
+            box.style.display = 'flex';
+            box.style.flexDirection = 'column'
+            box.style.marginBottom = '2em';
+            box.style.justifyContent = 'space-between';
+            box.style.height = '15em';
+            box.style.textAlign = 'center';
+
+
+
+
+
+            let title = document.createElement('div');
+            let image = document.createElement('div');
+            let price = document.createElement('div');
+
+            title.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].title)))
+            let imageSRC = document.createElement('img');
+            imageSRC.setAttribute('src', data.results[i].thumbnail)
+            price.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].price)))
+            image.appendChild(imageSRC)
+            box.appendChild(title)
+            box.appendChild(image)
+            box.appendChild(price)
+            container.appendChild(box)
+
+
+
+
+          }
+
+
+        })
+    
+
     muebles.addEventListener('click', function () {
       fetch('https://api.mercadolibre.com/sites/MLC/search?category=MLC1574', {
         method: 'GET',
@@ -339,14 +396,11 @@ export class ProductsComponent implements OnInit {
             box.appendChild(image)
             box.appendChild(price)
             container.appendChild(box)
-
-
-
-
           }
         })
     })
 
+    
 
 
 
