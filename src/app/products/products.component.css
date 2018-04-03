@@ -2,10 +2,10 @@
 .menuProducts{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   border-top: 2px gray solid;
   border-bottom: 3px black solid;
-  padding: 1em;
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
   cursor: pointer;

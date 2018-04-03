@@ -10,6 +10,9 @@ export class ProductsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    let container = document.querySelector('.container');
+
+
     //RESULTADO SEGÚN LA SELECCIÓN DEL USUARIO
     let muebles = document.querySelector('.muebles')
     let accesorios = document.querySelector('.accesorios')
@@ -19,7 +22,8 @@ export class ProductsComponent implements OnInit {
     let computacion = document.querySelector('.computacion')
 
     let menuProducts = document.querySelector('.menuProducts')
-
+    menuProducts.addEventListener('click', function(){
+    })
 
 
     fetch('https://api.mercadolibre.com/sites/MLC/search?category=MLC178483', {
@@ -48,6 +52,8 @@ export class ProductsComponent implements OnInit {
           box.style.height = '15em';
           box.style.textAlign = 'center';
           box.style.boxShadow = '10px 10px 5px 0px rgba(0,0,0,0.75)';
+          box.style.padding = '1em';
+          box.style.border = '1px #e7f400 solid';
 
           let title = document.createElement('div');
           title.className = 'title';
@@ -105,7 +111,8 @@ export class ProductsComponent implements OnInit {
             box.style.height = '15em';
             box.style.textAlign = 'center';
             box.style.boxShadow = '10px 10px 5px 0px rgba(0,0,0,0.75)';
-  
+            box.style.padding = '1em';
+
             let title = document.createElement('div');
             title.className = 'title';
             title.style.fontFamily = 'Roboto, sans-serif';
@@ -133,6 +140,8 @@ export class ProductsComponent implements OnInit {
   
 
         })
+        
+
     })
 
     accesorios.addEventListener('click', function () {
@@ -162,7 +171,8 @@ export class ProductsComponent implements OnInit {
             box.style.height = '15em';
             box.style.textAlign = 'center';
             box.style.boxShadow = '10px 10px 5px 0px rgba(0,0,0,0.75)';
-  
+            box.style.padding = '1em';
+
             let title = document.createElement('div');
             title.className = 'title';
             title.style.fontFamily = 'Roboto, sans-serif';
@@ -219,7 +229,8 @@ export class ProductsComponent implements OnInit {
             box.style.height = '15em';
             box.style.textAlign = 'center';
             box.style.boxShadow = '10px 10px 5px 0px rgba(0,0,0,0.75)';
-  
+            box.style.padding = '1em';
+
             let title = document.createElement('div');
             title.className = 'title';
             title.style.fontFamily = 'Roboto, sans-serif';
@@ -274,7 +285,8 @@ export class ProductsComponent implements OnInit {
             box.style.height = '15em';
             box.style.textAlign = 'center';
             box.style.boxShadow = '10px 10px 5px 0px rgba(0,0,0,0.75)';
-  
+            box.style.padding = '1em';
+
             let title = document.createElement('div');
             title.className = 'title';
             title.style.fontFamily = 'Roboto, sans-serif';
@@ -329,7 +341,8 @@ export class ProductsComponent implements OnInit {
             box.style.height = '15em';
             box.style.textAlign = 'center';
             box.style.boxShadow = '10px 10px 5px 0px rgba(0,0,0,0.75)';
-  
+            box.style.padding = '1em';
+
             let title = document.createElement('div');
             title.className = 'title';
             title.style.fontFamily = 'Roboto, sans-serif';
@@ -384,7 +397,8 @@ export class ProductsComponent implements OnInit {
             box.style.height = '15em';
             box.style.textAlign = 'center';
             box.style.boxShadow = '10px 10px 5px 0px rgba(0,0,0,0.75)';
-  
+            box.style.padding = '1em';
+
             let title = document.createElement('div');
             title.className = 'title';
             title.style.fontFamily = 'Roboto, sans-serif';
@@ -426,3 +440,4 @@ export class ProductsComponent implements OnInit {
   }
 
 }
+
