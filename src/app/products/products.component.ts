@@ -22,60 +22,61 @@ export class ProductsComponent implements OnInit {
 
 
 
-      fetch('https://api.mercadolibre.com/sites/MLC/search?category=MLC178483', {
-        method: 'GET',
-        mode: 'cors',
-        headers: {
-          'Access-Control-Allow-Origin': '*'
-        }
+    fetch('https://api.mercadolibre.com/sites/MLC/search?category=MLC178483', {
+      method: 'GET',
+      mode: 'cors',
+      headers: {
+        'Access-Control-Allow-Origin': '*'
+      }
+    })
+      .then(function (respt) {
+        return respt.json();
       })
-        .then(function (respt) {
-          return respt.json();
-        })
-        .then(function (data) {
-          console.log(data);
+      .then(function (data) {
+        console.log(data);
 
-          let container = document.querySelector('.container');
-          container.innerHTML='';
-          for (let i = 0; i < data.results.length; i++) {
-            let box = document.createElement('div');
-            box.className = 'box';
-            box.style.border = '1px blue solid';
-            box.style.background = 'pink';
-            box.style.width = '15em';
-            box.style.display = 'flex';
-            box.style.flexDirection = 'column'
-            box.style.marginBottom = '2em';
-            box.style.justifyContent = 'space-between';
-            box.style.height = '15em';
-            box.style.textAlign = 'center';
+        let container = document.querySelector('.container');
+        container.innerHTML = '';
+        for (let i = 0; i < data.results.length; i++) {
+          let box = document.createElement('div');
+          box.className = 'box';
+          box.style.width = '15em';
+          box.style.display = 'flex';
+          box.style.flexDirection = 'column'
+          box.style.marginBottom = '2em';
+          box.style.justifyContent = 'space-between';
+          box.style.height = '15em';
+          box.style.textAlign = 'center';
+          box.style.boxShadow = '10px 10px 5px 0px rgba(0,0,0,0.75)';
 
+          let title = document.createElement('div');
+          title.className = 'title';
+          title.style.fontFamily = 'Roboto, sans-serif';
+          let image = document.createElement('div');
+          let price = document.createElement('div');
 
-
-
-
-            let title = document.createElement('div');
-            let image = document.createElement('div');
-            let price = document.createElement('div');
-
-            title.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].title)))
-            let imageSRC = document.createElement('img');
-            imageSRC.setAttribute('src', data.results[i].thumbnail)
-            price.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].price)))
-            image.appendChild(imageSRC)
-            box.appendChild(title)
-            box.appendChild(image)
-            box.appendChild(price)
-            container.appendChild(box)
+          title.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].title)))
+          let imageSRC = document.createElement('img');
+          imageSRC.className = 'imageSRC';
+          imageSRC.style.borderRadius = '0px 10px 0px 10px';
+          imageSRC.style.border = '2px #0d68c2 solid';
+          imageSRC.setAttribute('src', data.results[i].thumbnail)
+          price.appendChild(document.createElement('p').appendChild(document.createTextNode('$ ')))
+          price.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].price)))
+          image.appendChild(imageSRC)
+          box.appendChild(title)
+          box.appendChild(image)
+          box.appendChild(price)
+          container.appendChild(box)
 
 
 
 
-          }
+        }
 
 
-        })
-    
+      })
+
 
     muebles.addEventListener('click', function () {
       fetch('https://api.mercadolibre.com/sites/MLC/search?category=MLC1574', {
@@ -92,12 +93,10 @@ export class ProductsComponent implements OnInit {
           console.log(data);
 
           let container = document.querySelector('.container');
-          container.innerHTML='';
+          container.innerHTML = '';
           for (let i = 0; i < data.results.length; i++) {
             let box = document.createElement('div');
             box.className = 'box';
-            box.style.border = '1px blue solid';
-            box.style.background = 'pink';
             box.style.width = '15em';
             box.style.display = 'flex';
             box.style.flexDirection = 'column'
@@ -105,30 +104,33 @@ export class ProductsComponent implements OnInit {
             box.style.justifyContent = 'space-between';
             box.style.height = '15em';
             box.style.textAlign = 'center';
-
-
-
-
-
+            box.style.boxShadow = '10px 10px 5px 0px rgba(0,0,0,0.75)';
+  
             let title = document.createElement('div');
+            title.className = 'title';
+            title.style.fontFamily = 'Roboto, sans-serif';
             let image = document.createElement('div');
             let price = document.createElement('div');
-
+  
             title.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].title)))
             let imageSRC = document.createElement('img');
+            imageSRC.className = 'imageSRC';
+            imageSRC.style.borderRadius = '0px 10px 0px 10px';
+            imageSRC.style.border = '2px #0d68c2 solid';
             imageSRC.setAttribute('src', data.results[i].thumbnail)
+            price.appendChild(document.createElement('p').appendChild(document.createTextNode('$ ')))
             price.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].price)))
             image.appendChild(imageSRC)
             box.appendChild(title)
             box.appendChild(image)
             box.appendChild(price)
             container.appendChild(box)
-
-
-
-
+  
+  
+  
+  
           }
-
+  
 
         })
     })
@@ -147,13 +149,11 @@ export class ProductsComponent implements OnInit {
         .then(function (data) {
           console.log(data);
           let container = document.querySelector('.container');
-          container.innerHTML='';
+          container.innerHTML = '';
 
           for (let i = 0; i < data.results.length; i++) {
             let box = document.createElement('div');
             box.className = 'box';
-            box.style.border = '1px blue solid';
-            box.style.background = 'pink';
             box.style.width = '15em';
             box.style.display = 'flex';
             box.style.flexDirection = 'column'
@@ -161,29 +161,33 @@ export class ProductsComponent implements OnInit {
             box.style.justifyContent = 'space-between';
             box.style.height = '15em';
             box.style.textAlign = 'center';
-
-
-
-
-
+            box.style.boxShadow = '10px 10px 5px 0px rgba(0,0,0,0.75)';
+  
             let title = document.createElement('div');
+            title.className = 'title';
+            title.style.fontFamily = 'Roboto, sans-serif';
             let image = document.createElement('div');
             let price = document.createElement('div');
-
+  
             title.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].title)))
             let imageSRC = document.createElement('img');
+            imageSRC.className = 'imageSRC';
+            imageSRC.style.borderRadius = '0px 10px 0px 10px';
+            imageSRC.style.border = '2px #0d68c2 solid';
             imageSRC.setAttribute('src', data.results[i].thumbnail)
+            price.appendChild(document.createElement('p').appendChild(document.createTextNode('$ ')))
             price.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].price)))
             image.appendChild(imageSRC)
             box.appendChild(title)
             box.appendChild(image)
             box.appendChild(price)
             container.appendChild(box)
-
-
-
-
+  
+  
+  
+  
           }
+  
 
         })
     })
@@ -202,13 +206,11 @@ export class ProductsComponent implements OnInit {
         .then(function (data) {
           console.log(data);
           let container = document.querySelector('.container');
-          container.innerHTML='';
+          container.innerHTML = '';
 
           for (let i = 0; i < data.results.length; i++) {
             let box = document.createElement('div');
             box.className = 'box';
-            box.style.border = '1px blue solid';
-            box.style.background = 'pink';
             box.style.width = '15em';
             box.style.display = 'flex';
             box.style.flexDirection = 'column'
@@ -216,30 +218,33 @@ export class ProductsComponent implements OnInit {
             box.style.justifyContent = 'space-between';
             box.style.height = '15em';
             box.style.textAlign = 'center';
-
-
-
-
-
+            box.style.boxShadow = '10px 10px 5px 0px rgba(0,0,0,0.75)';
+  
             let title = document.createElement('div');
+            title.className = 'title';
+            title.style.fontFamily = 'Roboto, sans-serif';
             let image = document.createElement('div');
             let price = document.createElement('div');
-
+  
             title.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].title)))
             let imageSRC = document.createElement('img');
+            imageSRC.className = 'imageSRC';
+            imageSRC.style.borderRadius = '0px 10px 0px 10px';
+            imageSRC.style.border = '2px #0d68c2 solid';
             imageSRC.setAttribute('src', data.results[i].thumbnail)
+            price.appendChild(document.createElement('p').appendChild(document.createTextNode('$ ')))
             price.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].price)))
             image.appendChild(imageSRC)
             box.appendChild(title)
             box.appendChild(image)
             box.appendChild(price)
             container.appendChild(box)
-
-
-
-
+  
+  
+  
+  
           }
-        })
+          })
     })
 
     herramientas.addEventListener('click', function () {
@@ -256,13 +261,11 @@ export class ProductsComponent implements OnInit {
         .then(function (data) {
           console.log(data);
           let container = document.querySelector('.container');
-          container.innerHTML='';
+          container.innerHTML = '';
 
           for (let i = 0; i < data.results.length; i++) {
             let box = document.createElement('div');
             box.className = 'box';
-            box.style.border = '1px blue solid';
-            box.style.background = 'pink';
             box.style.width = '15em';
             box.style.display = 'flex';
             box.style.flexDirection = 'column'
@@ -270,30 +273,33 @@ export class ProductsComponent implements OnInit {
             box.style.justifyContent = 'space-between';
             box.style.height = '15em';
             box.style.textAlign = 'center';
-
-
-
-
-
+            box.style.boxShadow = '10px 10px 5px 0px rgba(0,0,0,0.75)';
+  
             let title = document.createElement('div');
+            title.className = 'title';
+            title.style.fontFamily = 'Roboto, sans-serif';
             let image = document.createElement('div');
             let price = document.createElement('div');
-
+  
             title.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].title)))
             let imageSRC = document.createElement('img');
+            imageSRC.className = 'imageSRC';
+            imageSRC.style.borderRadius = '0px 10px 0px 10px';
+            imageSRC.style.border = '2px #0d68c2 solid';
             imageSRC.setAttribute('src', data.results[i].thumbnail)
+            price.appendChild(document.createElement('p').appendChild(document.createTextNode('$ ')))
             price.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].price)))
             image.appendChild(imageSRC)
             box.appendChild(title)
             box.appendChild(image)
             box.appendChild(price)
             container.appendChild(box)
-
-
-
-
+  
+  
+  
+  
           }
-        })
+          })
     })
 
     industrias.addEventListener('click', function () {
@@ -310,13 +316,11 @@ export class ProductsComponent implements OnInit {
         .then(function (data) {
           console.log(data);
           let container = document.querySelector('.container');
-          container.innerHTML='';
+          container.innerHTML = '';
 
           for (let i = 0; i < data.results.length; i++) {
             let box = document.createElement('div');
             box.className = 'box';
-            box.style.border = '1px blue solid';
-            box.style.background = 'pink';
             box.style.width = '15em';
             box.style.display = 'flex';
             box.style.flexDirection = 'column'
@@ -324,30 +328,33 @@ export class ProductsComponent implements OnInit {
             box.style.justifyContent = 'space-between';
             box.style.height = '15em';
             box.style.textAlign = 'center';
-
-
-
-
-
+            box.style.boxShadow = '10px 10px 5px 0px rgba(0,0,0,0.75)';
+  
             let title = document.createElement('div');
+            title.className = 'title';
+            title.style.fontFamily = 'Roboto, sans-serif';
             let image = document.createElement('div');
             let price = document.createElement('div');
-
+  
             title.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].title)))
             let imageSRC = document.createElement('img');
+            imageSRC.className = 'imageSRC';
+            imageSRC.style.borderRadius = '0px 10px 0px 10px';
+            imageSRC.style.border = '2px #0d68c2 solid';
             imageSRC.setAttribute('src', data.results[i].thumbnail)
+            price.appendChild(document.createElement('p').appendChild(document.createTextNode('$ ')))
             price.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].price)))
             image.appendChild(imageSRC)
             box.appendChild(title)
             box.appendChild(image)
             box.appendChild(price)
             container.appendChild(box)
-
-
-
-
+  
+  
+  
+  
           }
-        })
+          })
     })
 
     computacion.addEventListener('click', function () {
@@ -364,13 +371,11 @@ export class ProductsComponent implements OnInit {
         .then(function (data) {
           console.log(data);
           let container = document.querySelector('.container');
-          container.innerHTML='';
+          container.innerHTML = '';
 
           for (let i = 0; i < data.results.length; i++) {
             let box = document.createElement('div');
             box.className = 'box';
-            box.style.border = '1px blue solid';
-            box.style.background = 'pink';
             box.style.width = '15em';
             box.style.display = 'flex';
             box.style.flexDirection = 'column'
@@ -378,29 +383,38 @@ export class ProductsComponent implements OnInit {
             box.style.justifyContent = 'space-between';
             box.style.height = '15em';
             box.style.textAlign = 'center';
-
-
-
-
-
+            box.style.boxShadow = '10px 10px 5px 0px rgba(0,0,0,0.75)';
+  
             let title = document.createElement('div');
+            title.className = 'title';
+            title.style.fontFamily = 'Roboto, sans-serif';
             let image = document.createElement('div');
             let price = document.createElement('div');
-
+            price.className ='price';
+          
+            
             title.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].title)))
             let imageSRC = document.createElement('img');
+            imageSRC.className = 'imageSRC';
+            imageSRC.style.borderRadius = '0px 10px 0px 10px';
+            imageSRC.style.border = '2px #0d68c2 solid';
             imageSRC.setAttribute('src', data.results[i].thumbnail)
+            price.appendChild(document.createElement('p').appendChild(document.createTextNode('$ ')))
             price.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].price)))
             image.appendChild(imageSRC)
             box.appendChild(title)
             box.appendChild(image)
             box.appendChild(price)
             container.appendChild(box)
+  
+  
+  
+  
           }
-        })
+          })
     })
 
-    
+
 
 
 
