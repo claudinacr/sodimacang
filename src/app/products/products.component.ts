@@ -78,6 +78,12 @@ export class ProductsComponent implements OnInit {
           box.appendChild(title)
           box.appendChild(image)
           box.appendChild(price)
+          
+          let button = document.createElement('button');
+          button.textContent = 'Ver detalle';
+          button.className = 'button';
+          button.style.width = '5.8em';
+          box.appendChild(button);
           container.appendChild(box)
 
 
@@ -103,6 +109,7 @@ export class ProductsComponent implements OnInit {
         .then(function (data) {
           console.log(data);
 
+
           let container = document.querySelector('.container');
           container.innerHTML = '';
           for (let i = 0; i < data.results.length; i++) {
@@ -119,6 +126,7 @@ export class ProductsComponent implements OnInit {
             box.style.padding = '1em';
             box.style.borderRadius = '2px 2px 2px 2px';
           box.style.backgroundColor='#f1f5f6';
+          
 
             let title = document.createElement('div');
             title.className = 'title';
@@ -142,6 +150,11 @@ export class ProductsComponent implements OnInit {
             box.appendChild(title)
             box.appendChild(image)
             box.appendChild(price)
+            let button = document.createElement('button');
+          button.textContent = 'Ver detalle';
+          button.className = 'button';
+          button.style.width = '5.8em';
+          box.appendChild(button);
             container.appendChild(box)
   
   
@@ -185,6 +198,7 @@ export class ProductsComponent implements OnInit {
             box.style.padding = '1em';
             box.style.borderRadius = '2px 2px 2px 2px';
           box.style.backgroundColor='#f1f5f6';
+          
 
             let title = document.createElement('div');
             title.className = 'title';
@@ -208,12 +222,18 @@ export class ProductsComponent implements OnInit {
             box.appendChild(title)
             box.appendChild(image)
             box.appendChild(price)
+            let button = document.createElement('button');
+          button.textContent = 'Ver detalle';
+          button.className = 'button';
+          button.style.width = '5.8em';
+          box.appendChild(button);
             container.appendChild(box)
   
   
   
   
           }
+  
   
 
         })
@@ -249,6 +269,7 @@ export class ProductsComponent implements OnInit {
             box.style.padding = '1em';
             box.style.borderRadius = '2px 2px 2px 2px';
           box.style.backgroundColor='#f1f5f6';
+          
 
             let title = document.createElement('div');
             title.className = 'title';
@@ -272,6 +293,11 @@ export class ProductsComponent implements OnInit {
             box.appendChild(title)
             box.appendChild(image)
             box.appendChild(price)
+            let button = document.createElement('button');
+          button.textContent = 'Ver detalle';
+          button.className = 'button';
+          button.style.width = '5.8em';
+          box.appendChild(button);
             container.appendChild(box)
   
   
@@ -311,6 +337,7 @@ export class ProductsComponent implements OnInit {
             box.style.padding = '1em';
             box.style.borderRadius = '2px 2px 2px 2px';
           box.style.backgroundColor='#f1f5f6';
+          
 
             let title = document.createElement('div');
             title.className = 'title';
@@ -334,12 +361,18 @@ export class ProductsComponent implements OnInit {
             box.appendChild(title)
             box.appendChild(image)
             box.appendChild(price)
+            let button = document.createElement('button');
+          button.textContent = 'Ver detalle';
+          button.className = 'button';
+          button.style.width = '5.8em';
+          box.appendChild(button);
             container.appendChild(box)
   
   
   
   
           }
+  
           })
     })
 
@@ -373,6 +406,7 @@ export class ProductsComponent implements OnInit {
             box.style.padding = '1em';
             box.style.borderRadius = '2px 2px 2px 2px';
           box.style.backgroundColor='#f1f5f6';
+          
 
             let title = document.createElement('div');
             title.className = 'title';
@@ -396,12 +430,18 @@ export class ProductsComponent implements OnInit {
             box.appendChild(title)
             box.appendChild(image)
             box.appendChild(price)
+            let button = document.createElement('button');
+          button.textContent = 'Ver detalle';
+          button.className = 'button';
+          button.style.width = '5.8em';
+          box.appendChild(button);
             container.appendChild(box)
   
   
   
   
           }
+  
           })
     })
 
@@ -435,18 +475,18 @@ export class ProductsComponent implements OnInit {
             box.style.padding = '1em';
             box.style.borderRadius = '2px 2px 2px 2px';
           box.style.backgroundColor='#f1f5f6';
+          
 
             let title = document.createElement('div');
             title.className = 'title';
             title.style.fontFamily = 'Roboto, sans-serif';
             let image = document.createElement('div');
             let price = document.createElement('div');
-            price.className ='price';
+            price.className = 'price';
           price.style.fontSize = '1.2em';
           price.style.fontWeight = 'bold';
           price.style.fontFamily = 'Roboto, sans-serif';
-          
-            
+  
             title.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].title)))
             let imageSRC = document.createElement('img');
             imageSRC.className = 'imageSRC';
@@ -459,6 +499,11 @@ export class ProductsComponent implements OnInit {
             box.appendChild(title)
             box.appendChild(image)
             box.appendChild(price)
+            let button = document.createElement('button');
+          button.textContent = 'Ver detalle';
+          button.className = 'button';
+          button.style.width = '5.8em';
+          box.appendChild(button);
             container.appendChild(box)
   
   
