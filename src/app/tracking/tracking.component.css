@@ -13,10 +13,13 @@
   align-content: center;
 }
 
-#traking .izq {
+#traking > .izq {
   width: 50%;
   padding:20px;
-  padding-top: 0px;
+  padding-top: 0px;  
+  background-color: #eee;
+  box-shadow: 0px 5px 10px #888;
+  padding: 10px;
 }
 
 #traking .der {
@@ -26,11 +29,32 @@
 
 .myProduct .izq img {
   width: 100%;
-  padding:20px;
-  padding-top: 0px;
 }
 
 .myProduct .der {
   width: 50%;
   padding:20px;
+}
+
+.separator {
+  background-color: #110677;
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+#traking > .der .detailTrack{
+  width: 100%;
+  padding:20px;
+  padding-top: 0px;  
+  background-color: #ddd;
+  box-shadow: 0px 5px 10px #888;
+  padding: 10px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+#traking > .der .active {
+  background-color: #5CB81F;
+  color: white;
 }

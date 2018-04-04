@@ -5,13 +5,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 import { TrackingComponent } from './tracking/tracking.component';
+import { CarritoComponent } from './carrito/carrito.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
-    TrackingComponent
+    TrackingComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule
