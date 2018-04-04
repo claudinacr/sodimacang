@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 import { TrackingComponent } from './tracking/tracking.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { ForemanComponent } from './foreman/foreman.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { CarritoComponent } from './carrito/carrito.component';
     AppComponent,
     ProductsComponent,
     TrackingComponent,
-    CarritoComponent
+    CarritoComponent,
+    ForemanComponent
   ],
   imports: [
     BrowserModule
