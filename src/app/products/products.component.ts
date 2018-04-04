@@ -98,19 +98,55 @@ export class ProductsComponent implements OnInit {
           button.style.backgroundColor = '#49515f';
           button.style.color = 'white';
           button.addEventListener('click', function(){
+            //creamos la sección con el detalle del producto
+            let seccion = document.createElement('section');
+            seccion.style.display = 'flex';
+            seccion.style.justifyContent = 'center';
+            //contenedor del detalle del producto
+            let cajaProducto = document.createElement('div');
+            cajaProducto.style.display = 'flex';
+            cajaProducto.style.justifyContent= 'center';
+            cajaProducto.style.width= '43em';
+            cajaProducto.style.height= '27em';
+            cajaProducto.style.boxShadow = '10px 10px 20px -4px rgba(138,134,138,1)';
+            //div de la imágen del producto
+            let cajaImagen = document.createElement('div');
+            cajaImagen.style.width= '20em';
+            cajaImagen.style.height= '20em';
+            cajaImagen.style.margin= '2em';
+            let imagenProducto = event.target.parentNode.children[2].textContent;
+            console.log(imagenProducto);
+            //div que contiene los detalles de texto
+            let dataProduct = document.createElement('div');
+            dataProduct.style.margin= '1em 1.5em 1em 1em';
+            //titulo del producto
+            let titleProduct = event.target.parentNode.firstChild.textContent;
+            //descripción del producto
+            let descriptionProduct = event.target.parentNode.children[3].parentNode.textContent;
+            console.log(descriptionProduct);
+
+            
+
             let caja = document.createElement('div');
             caja.style.zIndex = '2000';
             caja.style.width = '30em';
             caja.style.height = '30em';
             caja.style.backgroundColor = '#f0f5f6';
-            let titleDetail = event.target.parentNode.firstChild.textContent;
-            caja.appendChild(document.createElement('p').appendChild(document.createTextNode(titleDetail)))
+            
+            seccion.appendChild(cajaProducto);
+            cajaProducto.appendChild(cajaImagen);
+            cajaProducto.appendChild(dataProduct);
+            dataProduct.appendChild(document.createElement('p').appendChild(document.createTextNode(titleProduct)))
+            cajaImagen.appendChild(document.createElement('p').appendChild(document.createTextNode(imagenProducto)));
+            
+            caja.appendChild(document.createElement('p').appendChild(document.createTextNode(titleProduct)))
 
             let buttonClouse = document.createElement('button');
             buttonClouse.textContent = 'Cerrar';
             caja.appendChild(buttonClouse);
             let boxx = document.querySelector('.boxx');
-            boxx.appendChild(caja)
+            
+            boxx.appendChild(seccion)
            
 
             container.style.display = 'none';
