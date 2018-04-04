@@ -82,7 +82,22 @@ export class ProductsComponent implements OnInit {
           let button = document.createElement('button');
           button.textContent = 'Ver detalle';
           button.className = 'button';
-          button.style.width = '5.8em';
+          button.style.width = '6em';
+          button.style.marginLeft = 'auto';
+          button.style.marginRight = 'auto';
+          button.style.padding = '0.1em';
+          button.style.border = 'none';
+          button.style.borderRadius = '2px 2px 2px 2px';
+          button.style.paddingTop = '0.3em';
+          button.style.paddingBottom = '0.3em';
+          button.style.paddingLeft = '0.3em';
+          button.style.paddingRight = '0.3em';
+          button.style.cursor = 'pointer';
+          button.style.backgroundColor = '#49515f';
+          button.style.color = 'white';
+
+
+
           box.appendChild(button);
           container.appendChild(box)
 
@@ -125,18 +140,17 @@ export class ProductsComponent implements OnInit {
             box.style.boxShadow = '10px 10px 5px 0px rgba(0,0,0,0.75)';
             box.style.padding = '1em';
             box.style.borderRadius = '2px 2px 2px 2px';
-          box.style.backgroundColor='#f1f5f6';
-          
-
+            box.style.backgroundColor='#f1f5f6';
+  
             let title = document.createElement('div');
             title.className = 'title';
             title.style.fontFamily = 'Roboto, sans-serif';
             let image = document.createElement('div');
             let price = document.createElement('div');
             price.className = 'price';
-          price.style.fontSize = '1.2em';
-          price.style.fontWeight = 'bold';
-          price.style.fontFamily = 'Roboto, sans-serif';
+            price.style.fontSize = '1.2em';
+            price.style.fontWeight = 'bold';
+            price.style.fontFamily = 'Roboto, sans-serif';
   
             title.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].title)))
             let imageSRC = document.createElement('img');
@@ -150,17 +164,34 @@ export class ProductsComponent implements OnInit {
             box.appendChild(title)
             box.appendChild(image)
             box.appendChild(price)
+            
             let button = document.createElement('button');
-          button.textContent = 'Ver detalle';
-          button.className = 'button';
-          button.style.width = '5.8em';
-          box.appendChild(button);
+            button.textContent = 'Ver detalle';
+            button.className = 'button';
+            button.style.width = '6em';
+            button.style.marginLeft = 'auto';
+            button.style.marginRight = 'auto';
+            button.style.padding = '0.1em';
+            button.style.border = 'none';
+            button.style.borderRadius = '2px 2px 2px 2px';
+            button.style.paddingTop = '0.3em';
+            button.style.paddingBottom = '0.3em';
+            button.style.paddingLeft = '0.3em';
+            button.style.paddingRight = '0.3em';
+            button.style.cursor = 'pointer';
+            button.style.backgroundColor = '#49515f';
+            button.style.color = 'white';
+  
+  
+  
+            box.appendChild(button);
             container.appendChild(box)
   
   
   
   
           }
+  
   
 
         })
@@ -197,18 +228,17 @@ export class ProductsComponent implements OnInit {
             box.style.boxShadow = '10px 10px 5px 0px rgba(0,0,0,0.75)';
             box.style.padding = '1em';
             box.style.borderRadius = '2px 2px 2px 2px';
-          box.style.backgroundColor='#f1f5f6';
-          
-
+            box.style.backgroundColor='#f1f5f6';
+  
             let title = document.createElement('div');
             title.className = 'title';
             title.style.fontFamily = 'Roboto, sans-serif';
             let image = document.createElement('div');
             let price = document.createElement('div');
             price.className = 'price';
-          price.style.fontSize = '1.2em';
-          price.style.fontWeight = 'bold';
-          price.style.fontFamily = 'Roboto, sans-serif';
+            price.style.fontSize = '1.2em';
+            price.style.fontWeight = 'bold';
+            price.style.fontFamily = 'Roboto, sans-serif';
   
             title.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].title)))
             let imageSRC = document.createElement('img');
@@ -222,18 +252,34 @@ export class ProductsComponent implements OnInit {
             box.appendChild(title)
             box.appendChild(image)
             box.appendChild(price)
+            
             let button = document.createElement('button');
-          button.textContent = 'Ver detalle';
-          button.className = 'button';
-          button.style.width = '5.8em';
-          box.appendChild(button);
+            button.textContent = 'Ver detalle';
+            button.className = 'button';
+            button.style.width = '6em';
+            button.style.marginLeft = 'auto';
+            button.style.marginRight = 'auto';
+            button.style.padding = '0.1em';
+            button.style.border = 'none';
+            button.style.borderRadius = '2px 2px 2px 2px';
+            button.style.paddingTop = '0.3em';
+            button.style.paddingBottom = '0.3em';
+            button.style.paddingLeft = '0.3em';
+            button.style.paddingRight = '0.3em';
+            button.style.cursor = 'pointer';
+            button.style.backgroundColor = '#49515f';
+            button.style.color = 'white';
+  
+  
+  
+            box.appendChild(button);
             container.appendChild(box)
   
   
   
   
           }
-  
+    
   
 
         })
@@ -268,18 +314,17 @@ export class ProductsComponent implements OnInit {
             box.style.boxShadow = '10px 10px 5px 0px rgba(0,0,0,0.75)';
             box.style.padding = '1em';
             box.style.borderRadius = '2px 2px 2px 2px';
-          box.style.backgroundColor='#f1f5f6';
-          
-
+            box.style.backgroundColor='#f1f5f6';
+  
             let title = document.createElement('div');
             title.className = 'title';
             title.style.fontFamily = 'Roboto, sans-serif';
             let image = document.createElement('div');
             let price = document.createElement('div');
             price.className = 'price';
-          price.style.fontSize = '1.2em';
-          price.style.fontWeight = 'bold';
-          price.style.fontFamily = 'Roboto, sans-serif';
+            price.style.fontSize = '1.2em';
+            price.style.fontWeight = 'bold';
+            price.style.fontFamily = 'Roboto, sans-serif';
   
             title.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].title)))
             let imageSRC = document.createElement('img');
@@ -293,18 +338,34 @@ export class ProductsComponent implements OnInit {
             box.appendChild(title)
             box.appendChild(image)
             box.appendChild(price)
+            
             let button = document.createElement('button');
-          button.textContent = 'Ver detalle';
-          button.className = 'button';
-          button.style.width = '5.8em';
-          box.appendChild(button);
+            button.textContent = 'Ver detalle';
+            button.className = 'button';
+            button.style.width = '6em';
+            button.style.marginLeft = 'auto';
+            button.style.marginRight = 'auto';
+            button.style.padding = '0.1em';
+            button.style.border = 'none';
+            button.style.borderRadius = '2px 2px 2px 2px';
+            button.style.paddingTop = '0.3em';
+            button.style.paddingBottom = '0.3em';
+            button.style.paddingLeft = '0.3em';
+            button.style.paddingRight = '0.3em';
+            button.style.cursor = 'pointer';
+            button.style.backgroundColor = '#49515f';
+            button.style.color = 'white';
+  
+  
+  
+            box.appendChild(button);
             container.appendChild(box)
   
   
   
   
           }
-          })
+            })
     })
 
     herramientas.addEventListener('click', function () {
@@ -336,18 +397,17 @@ export class ProductsComponent implements OnInit {
             box.style.boxShadow = '10px 10px 5px 0px rgba(0,0,0,0.75)';
             box.style.padding = '1em';
             box.style.borderRadius = '2px 2px 2px 2px';
-          box.style.backgroundColor='#f1f5f6';
-          
-
+            box.style.backgroundColor='#f1f5f6';
+  
             let title = document.createElement('div');
             title.className = 'title';
             title.style.fontFamily = 'Roboto, sans-serif';
             let image = document.createElement('div');
             let price = document.createElement('div');
             price.className = 'price';
-          price.style.fontSize = '1.2em';
-          price.style.fontWeight = 'bold';
-          price.style.fontFamily = 'Roboto, sans-serif';
+            price.style.fontSize = '1.2em';
+            price.style.fontWeight = 'bold';
+            price.style.fontFamily = 'Roboto, sans-serif';
   
             title.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].title)))
             let imageSRC = document.createElement('img');
@@ -361,18 +421,34 @@ export class ProductsComponent implements OnInit {
             box.appendChild(title)
             box.appendChild(image)
             box.appendChild(price)
+            
             let button = document.createElement('button');
-          button.textContent = 'Ver detalle';
-          button.className = 'button';
-          button.style.width = '5.8em';
-          box.appendChild(button);
+            button.textContent = 'Ver detalle';
+            button.className = 'button';
+            button.style.width = '6em';
+            button.style.marginLeft = 'auto';
+            button.style.marginRight = 'auto';
+            button.style.padding = '0.1em';
+            button.style.border = 'none';
+            button.style.borderRadius = '2px 2px 2px 2px';
+            button.style.paddingTop = '0.3em';
+            button.style.paddingBottom = '0.3em';
+            button.style.paddingLeft = '0.3em';
+            button.style.paddingRight = '0.3em';
+            button.style.cursor = 'pointer';
+            button.style.backgroundColor = '#49515f';
+            button.style.color = 'white';
+  
+  
+  
+            box.appendChild(button);
             container.appendChild(box)
   
   
   
   
           }
-  
+    
           })
     })
 
@@ -405,18 +481,17 @@ export class ProductsComponent implements OnInit {
             box.style.boxShadow = '10px 10px 5px 0px rgba(0,0,0,0.75)';
             box.style.padding = '1em';
             box.style.borderRadius = '2px 2px 2px 2px';
-          box.style.backgroundColor='#f1f5f6';
-          
-
+            box.style.backgroundColor='#f1f5f6';
+  
             let title = document.createElement('div');
             title.className = 'title';
             title.style.fontFamily = 'Roboto, sans-serif';
             let image = document.createElement('div');
             let price = document.createElement('div');
             price.className = 'price';
-          price.style.fontSize = '1.2em';
-          price.style.fontWeight = 'bold';
-          price.style.fontFamily = 'Roboto, sans-serif';
+            price.style.fontSize = '1.2em';
+            price.style.fontWeight = 'bold';
+            price.style.fontFamily = 'Roboto, sans-serif';
   
             title.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].title)))
             let imageSRC = document.createElement('img');
@@ -430,18 +505,34 @@ export class ProductsComponent implements OnInit {
             box.appendChild(title)
             box.appendChild(image)
             box.appendChild(price)
+            
             let button = document.createElement('button');
-          button.textContent = 'Ver detalle';
-          button.className = 'button';
-          button.style.width = '5.8em';
-          box.appendChild(button);
+            button.textContent = 'Ver detalle';
+            button.className = 'button';
+            button.style.width = '6em';
+            button.style.marginLeft = 'auto';
+            button.style.marginRight = 'auto';
+            button.style.padding = '0.1em';
+            button.style.border = 'none';
+            button.style.borderRadius = '2px 2px 2px 2px';
+            button.style.paddingTop = '0.3em';
+            button.style.paddingBottom = '0.3em';
+            button.style.paddingLeft = '0.3em';
+            button.style.paddingRight = '0.3em';
+            button.style.cursor = 'pointer';
+            button.style.backgroundColor = '#49515f';
+            button.style.color = 'white';
+  
+  
+  
+            box.appendChild(button);
             container.appendChild(box)
   
   
   
   
           }
-  
+    
           })
     })
 
@@ -474,18 +565,17 @@ export class ProductsComponent implements OnInit {
             box.style.boxShadow = '10px 10px 5px 0px rgba(0,0,0,0.75)';
             box.style.padding = '1em';
             box.style.borderRadius = '2px 2px 2px 2px';
-          box.style.backgroundColor='#f1f5f6';
-          
-
+            box.style.backgroundColor='#f1f5f6';
+  
             let title = document.createElement('div');
             title.className = 'title';
             title.style.fontFamily = 'Roboto, sans-serif';
             let image = document.createElement('div');
             let price = document.createElement('div');
             price.className = 'price';
-          price.style.fontSize = '1.2em';
-          price.style.fontWeight = 'bold';
-          price.style.fontFamily = 'Roboto, sans-serif';
+            price.style.fontSize = '1.2em';
+            price.style.fontWeight = 'bold';
+            price.style.fontFamily = 'Roboto, sans-serif';
   
             title.appendChild(document.createElement('p').appendChild(document.createTextNode(data.results[i].title)))
             let imageSRC = document.createElement('img');
@@ -499,18 +589,34 @@ export class ProductsComponent implements OnInit {
             box.appendChild(title)
             box.appendChild(image)
             box.appendChild(price)
+            
             let button = document.createElement('button');
-          button.textContent = 'Ver detalle';
-          button.className = 'button';
-          button.style.width = '5.8em';
-          box.appendChild(button);
+            button.textContent = 'Ver detalle';
+            button.className = 'button';
+            button.style.width = '6em';
+            button.style.marginLeft = 'auto';
+            button.style.marginRight = 'auto';
+            button.style.padding = '0.1em';
+            button.style.border = 'none';
+            button.style.borderRadius = '2px 2px 2px 2px';
+            button.style.paddingTop = '0.3em';
+            button.style.paddingBottom = '0.3em';
+            button.style.paddingLeft = '0.3em';
+            button.style.paddingRight = '0.3em';
+            button.style.cursor = 'pointer';
+            button.style.backgroundColor = '#49515f';
+            button.style.color = 'white';
+  
+  
+  
+            box.appendChild(button);
             container.appendChild(box)
   
   
   
   
           }
-          })
+            })
     })
 
 
