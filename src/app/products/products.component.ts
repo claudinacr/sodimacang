@@ -102,7 +102,10 @@ export class ProductsComponent implements OnInit {
             caja.style.zIndex = '2000';
             caja.style.width = '30em';
             caja.style.height = '30em';
-            caja.style.backgroundColor = 'blue';
+            caja.style.backgroundColor = '#f0f5f6';
+            let titleDetail = event.target.parentNode.firstChild.textContent;
+            caja.appendChild(document.createElement('p').appendChild(document.createTextNode(titleDetail)))
+
             let buttonClouse = document.createElement('button');
             buttonClouse.textContent = 'Cerrar';
             caja.appendChild(buttonClouse);
