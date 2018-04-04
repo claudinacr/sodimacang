@@ -10,8 +10,32 @@ export class ProductsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    let container = document.querySelector('.container');
 
+    // selector
+var menu = document.querySelector('.hamburger');
+
+// method
+function toggleMenu (event) {
+  this.classList.toggle('is-active');
+  document.querySelector( ".menuppal" ).classList.toggle("is_active");
+  event.preventDefault();
+}
+
+// event
+menu.addEventListener('click', toggleMenu, false);
+
+//Solución con jQUery
+/*$(document).ready(function(){
+	$('.hamburger').click(function() {
+		$('.hamburger').toggleClass('is-active');
+		$('.menuresponsive').toggleClass('is-active');
+		return false;
+	});
+});*/
+
+    
+    
+    let container = document.querySelector('.container');
 
     //RESULTADO SEGÚN LA SELECCIÓN DEL USUARIO
     let muebles = document.querySelector('.muebles')
@@ -24,6 +48,9 @@ export class ProductsComponent implements OnInit {
     let menuProducts = document.querySelector('.menuProducts')
    
    
+    
+    
+    /*** starwars.com's Toggle Icon Animation ***/
    
     fetch('https://api.mercadolibre.com/sites/MLC/search?category=MLC178483', {
       method: 'GET',
@@ -81,6 +108,7 @@ export class ProductsComponent implements OnInit {
           let button = document.createElement('button');
           button.textContent = 'Ver detalle';
           button.className = 'button';
+          
           
          
 
@@ -860,7 +888,7 @@ export class ProductsComponent implements OnInit {
               buttonClouse.addEventListener('click', function(){
                 container.style.display = 'flex';
                 boxx.style.display = 'none';
-                location.reload();
+                location.reload(container);
   
   
   
