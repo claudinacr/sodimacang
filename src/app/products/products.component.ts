@@ -24,8 +24,8 @@ export class ProductsComponent implements OnInit {
     let menuProducts = document.querySelector('.menuProducts')
     menuProducts.addEventListener('click', function(){
     })
-
-
+   
+   
     fetch('https://api.mercadolibre.com/sites/MLC/search?category=MLC178483', {
       method: 'GET',
       mode: 'cors',
