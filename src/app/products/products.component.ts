@@ -106,13 +106,13 @@ menu.addEventListener('click', toggleMenu, false);
           box.appendChild(price)
           
           let button = document.createElement('button');
-          button.textContent = 'VER PRODUCTO';
+          button.textContent = 'Ver detalle';
           button.className = 'button';
           
           
          
 
-          button.style.width = '9em';
+          button.style.width = '6em';
           button.style.marginLeft = 'auto';
           button.style.marginRight = 'auto';
           button.style.padding = '0.1em';
@@ -262,12 +262,12 @@ menu.addEventListener('click', toggleMenu, false);
             box.appendChild(price)
             
             let button = document.createElement('button');
-            button.textContent = 'VER PRODUCTO';
+            button.textContent = 'Ver detalle';
             button.className = 'button';
             
            
   
-            button.style.width = '9em';
+            button.style.width = '6em';
             button.style.marginLeft = 'auto';
             button.style.marginRight = 'auto';
             button.style.padding = '0.1em';
@@ -383,12 +383,12 @@ menu.addEventListener('click', toggleMenu, false);
             box.appendChild(price)
             
             let button = document.createElement('button');
-            button.textContent = 'VER PRODUCTO';
+            button.textContent = 'Ver detalle';
             button.className = 'button';
             
            
   
-            button.style.width = '9em';
+            button.style.width = '6em';
             button.style.marginLeft = 'auto';
             button.style.marginRight = 'auto';
             button.style.padding = '0.1em';
@@ -501,12 +501,12 @@ menu.addEventListener('click', toggleMenu, false);
             box.appendChild(price)
             
             let button = document.createElement('button');
-            button.textContent = 'VER PRODUCTO';
+            button.textContent = 'Ver detalle';
             button.className = 'button';
             
            
   
-            button.style.width = '9em';
+            button.style.width = '6em';
             button.style.marginLeft = 'auto';
             button.style.marginRight = 'auto';
             button.style.padding = '0.1em';
@@ -617,12 +617,12 @@ menu.addEventListener('click', toggleMenu, false);
             box.appendChild(price)
             
             let button = document.createElement('button');
-            button.textContent = 'VER PRODUCTO';
+            button.textContent = 'Ver detalle';
             button.className = 'button';
             
            
   
-            button.style.width = '9em';
+            button.style.width = '6em';
             button.style.marginLeft = 'auto';
             button.style.marginRight = 'auto';
             button.style.padding = '0.1em';
@@ -733,12 +733,12 @@ menu.addEventListener('click', toggleMenu, false);
             box.appendChild(price)
             
             let button = document.createElement('button');
-            button.textContent = 'VER PRODUCTO';
+            button.textContent = 'Ver detalle';
             button.className = 'button';
             
            
   
-            button.style.width = '9em';
+            button.style.width = '6em';
             button.style.marginLeft = 'auto';
             button.style.marginRight = 'auto';
             button.style.padding = '0.1em';
@@ -850,12 +850,12 @@ menu.addEventListener('click', toggleMenu, false);
             box.appendChild(price)
             
             let button = document.createElement('button');
-            button.textContent = 'VER PRODUCTO';
+            button.textContent = 'Ver detalle';
             button.className = 'button';
             
            
   
-            button.style.width = 'em';
+            button.style.width = '6em';
             button.style.marginLeft = 'auto';
             button.style.marginRight = 'auto';
             button.style.padding = '0.1em';
