@@ -22,8 +22,7 @@ export class ProductsComponent implements OnInit {
     let computacion = document.querySelector('.computacion')
 
     let menuProducts = document.querySelector('.menuProducts')
-    menuProducts.addEventListener('click', function(){
-    })
+   
    
    
     fetch('https://api.mercadolibre.com/sites/MLC/search?category=MLC178483', {
@@ -82,6 +81,9 @@ export class ProductsComponent implements OnInit {
           let button = document.createElement('button');
           button.textContent = 'Ver detalle';
           button.className = 'button';
+          
+         
+
           button.style.width = '6em';
           button.style.marginLeft = 'auto';
           button.style.marginRight = 'auto';
@@ -95,8 +97,35 @@ export class ProductsComponent implements OnInit {
           button.style.cursor = 'pointer';
           button.style.backgroundColor = '#49515f';
           button.style.color = 'white';
+          button.addEventListener('click', function(){
+            let caja = document.createElement('div');
+            caja.style.zIndex = '2000';
+            caja.style.width = '30em';
+            caja.style.height = '30em';
+            caja.style.backgroundColor = 'blue';
+            let buttonClouse = document.createElement('button');
+            buttonClouse.textContent = 'Cerrar';
+            caja.appendChild(buttonClouse);
+            let boxx = document.querySelector('.boxx');
+            boxx.appendChild(caja)
+           
+
+            container.style.display = 'none';
+            buttonClouse.addEventListener('click', function(){
+              container.style.display = 'flex';
+              boxx.style.display = 'none';
+              location.reload();
 
 
+
+            })
+
+
+
+
+            
+          })
+       
 
           box.appendChild(button);
           container.appendChild(box)
