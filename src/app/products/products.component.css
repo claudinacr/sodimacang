@@ -2,28 +2,27 @@
 .menuProducts{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   border-top: 2px gray solid;
   border-bottom: 3px black solid;
-  padding: 1em;
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
   cursor: pointer;
 }
 
 .container{
-  background-color: peachpuff;
-  width: 90%;
-  border: 0.2em blue solid;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 2em;
 }
 
-.box{
-  width: 5em;
-  border: 0.2em blue solid;
-}
+
+
+
+
+
