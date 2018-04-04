@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+#traking {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.myProduct{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#traking .izq {
+  width: 50%;
+  padding:20px;
+  padding-top: 0px;
+}
+
+#traking .der {
+  width: 50%;
+  padding:20px;
+}
+
+.myProduct .izq img {
+  width: 100%;
+  padding:20px;
+  padding-top: 0px;
+}
+
+.myProduct .der {
+  width: 50%;
+  padding:20px;
+}
