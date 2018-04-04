@@ -200,6 +200,9 @@ export class ProductsComponent implements OnInit {
             let button = document.createElement('button');
             button.textContent = 'Ver detalle';
             button.className = 'button';
+            
+           
+  
             button.style.width = '6em';
             button.style.marginLeft = 'auto';
             button.style.marginRight = 'auto';
@@ -213,8 +216,38 @@ export class ProductsComponent implements OnInit {
             button.style.cursor = 'pointer';
             button.style.backgroundColor = '#49515f';
             button.style.color = 'white';
+            button.addEventListener('click', function(){
+              let caja = document.createElement('div');
+              caja.style.zIndex = '2000';
+              caja.style.width = '30em';
+              caja.style.height = '30em';
+              caja.style.backgroundColor = '#f0f5f6';
+              let titleDetail = event.target.parentNode.firstChild.textContent;
+              caja.appendChild(document.createElement('p').appendChild(document.createTextNode(titleDetail)))
+  
+              let buttonClouse = document.createElement('button');
+              buttonClouse.textContent = 'Cerrar';
+              caja.appendChild(buttonClouse);
+              let boxx = document.querySelector('.boxx');
+              boxx.appendChild(caja)
+             
+  
+              container.style.display = 'none';
+              buttonClouse.addEventListener('click', function(){
+                container.style.display = 'flex';
+                boxx.style.display = 'none';
+                location.reload();
   
   
+  
+              })
+  
+  
+  
+  
+              
+            })
+         
   
             box.appendChild(button);
             container.appendChild(box)
@@ -288,6 +321,9 @@ export class ProductsComponent implements OnInit {
             let button = document.createElement('button');
             button.textContent = 'Ver detalle';
             button.className = 'button';
+            
+           
+  
             button.style.width = '6em';
             button.style.marginLeft = 'auto';
             button.style.marginRight = 'auto';
@@ -301,8 +337,38 @@ export class ProductsComponent implements OnInit {
             button.style.cursor = 'pointer';
             button.style.backgroundColor = '#49515f';
             button.style.color = 'white';
+            button.addEventListener('click', function(){
+              let caja = document.createElement('div');
+              caja.style.zIndex = '2000';
+              caja.style.width = '30em';
+              caja.style.height = '30em';
+              caja.style.backgroundColor = '#f0f5f6';
+              let titleDetail = event.target.parentNode.firstChild.textContent;
+              caja.appendChild(document.createElement('p').appendChild(document.createTextNode(titleDetail)))
+  
+              let buttonClouse = document.createElement('button');
+              buttonClouse.textContent = 'Cerrar';
+              caja.appendChild(buttonClouse);
+              let boxx = document.querySelector('.boxx');
+              boxx.appendChild(caja)
+             
+  
+              container.style.display = 'none';
+              buttonClouse.addEventListener('click', function(){
+                container.style.display = 'flex';
+                boxx.style.display = 'none';
+                location.reload();
   
   
+  
+              })
+  
+  
+  
+  
+              
+            })
+         
   
             box.appendChild(button);
             container.appendChild(box)
@@ -310,8 +376,7 @@ export class ProductsComponent implements OnInit {
   
   
   
-          }
-    
+          }    
   
 
         })
@@ -374,6 +439,9 @@ export class ProductsComponent implements OnInit {
             let button = document.createElement('button');
             button.textContent = 'Ver detalle';
             button.className = 'button';
+            
+           
+  
             button.style.width = '6em';
             button.style.marginLeft = 'auto';
             button.style.marginRight = 'auto';
@@ -387,8 +455,38 @@ export class ProductsComponent implements OnInit {
             button.style.cursor = 'pointer';
             button.style.backgroundColor = '#49515f';
             button.style.color = 'white';
+            button.addEventListener('click', function(){
+              let caja = document.createElement('div');
+              caja.style.zIndex = '2000';
+              caja.style.width = '30em';
+              caja.style.height = '30em';
+              caja.style.backgroundColor = '#f0f5f6';
+              let titleDetail = event.target.parentNode.firstChild.textContent;
+              caja.appendChild(document.createElement('p').appendChild(document.createTextNode(titleDetail)))
+  
+              let buttonClouse = document.createElement('button');
+              buttonClouse.textContent = 'Cerrar';
+              caja.appendChild(buttonClouse);
+              let boxx = document.querySelector('.boxx');
+              boxx.appendChild(caja)
+             
+  
+              container.style.display = 'none';
+              buttonClouse.addEventListener('click', function(){
+                container.style.display = 'flex';
+                boxx.style.display = 'none';
+                location.reload();
   
   
+  
+              })
+  
+  
+  
+  
+              
+            })
+         
   
             box.appendChild(button);
             container.appendChild(box)
@@ -457,6 +555,9 @@ export class ProductsComponent implements OnInit {
             let button = document.createElement('button');
             button.textContent = 'Ver detalle';
             button.className = 'button';
+            
+           
+  
             button.style.width = '6em';
             button.style.marginLeft = 'auto';
             button.style.marginRight = 'auto';
@@ -470,8 +571,38 @@ export class ProductsComponent implements OnInit {
             button.style.cursor = 'pointer';
             button.style.backgroundColor = '#49515f';
             button.style.color = 'white';
+            button.addEventListener('click', function(){
+              let caja = document.createElement('div');
+              caja.style.zIndex = '2000';
+              caja.style.width = '30em';
+              caja.style.height = '30em';
+              caja.style.backgroundColor = '#f0f5f6';
+              let titleDetail = event.target.parentNode.firstChild.textContent;
+              caja.appendChild(document.createElement('p').appendChild(document.createTextNode(titleDetail)))
+  
+              let buttonClouse = document.createElement('button');
+              buttonClouse.textContent = 'Cerrar';
+              caja.appendChild(buttonClouse);
+              let boxx = document.querySelector('.boxx');
+              boxx.appendChild(caja)
+             
+  
+              container.style.display = 'none';
+              buttonClouse.addEventListener('click', function(){
+                container.style.display = 'flex';
+                boxx.style.display = 'none';
+                location.reload();
   
   
+  
+              })
+  
+  
+  
+  
+              
+            })
+         
   
             box.appendChild(button);
             container.appendChild(box)
@@ -480,7 +611,6 @@ export class ProductsComponent implements OnInit {
   
   
           }
-    
           })
     })
 
@@ -541,6 +671,9 @@ export class ProductsComponent implements OnInit {
             let button = document.createElement('button');
             button.textContent = 'Ver detalle';
             button.className = 'button';
+            
+           
+  
             button.style.width = '6em';
             button.style.marginLeft = 'auto';
             button.style.marginRight = 'auto';
@@ -554,8 +687,38 @@ export class ProductsComponent implements OnInit {
             button.style.cursor = 'pointer';
             button.style.backgroundColor = '#49515f';
             button.style.color = 'white';
+            button.addEventListener('click', function(){
+              let caja = document.createElement('div');
+              caja.style.zIndex = '2000';
+              caja.style.width = '30em';
+              caja.style.height = '30em';
+              caja.style.backgroundColor = '#f0f5f6';
+              let titleDetail = event.target.parentNode.firstChild.textContent;
+              caja.appendChild(document.createElement('p').appendChild(document.createTextNode(titleDetail)))
+  
+              let buttonClouse = document.createElement('button');
+              buttonClouse.textContent = 'Cerrar';
+              caja.appendChild(buttonClouse);
+              let boxx = document.querySelector('.boxx');
+              boxx.appendChild(caja)
+             
+  
+              container.style.display = 'none';
+              buttonClouse.addEventListener('click', function(){
+                container.style.display = 'flex';
+                boxx.style.display = 'none';
+                location.reload();
   
   
+  
+              })
+  
+  
+  
+  
+              
+            })
+         
   
             box.appendChild(button);
             container.appendChild(box)
@@ -625,6 +788,9 @@ export class ProductsComponent implements OnInit {
             let button = document.createElement('button');
             button.textContent = 'Ver detalle';
             button.className = 'button';
+            
+           
+  
             button.style.width = '6em';
             button.style.marginLeft = 'auto';
             button.style.marginRight = 'auto';
@@ -638,8 +804,38 @@ export class ProductsComponent implements OnInit {
             button.style.cursor = 'pointer';
             button.style.backgroundColor = '#49515f';
             button.style.color = 'white';
+            button.addEventListener('click', function(){
+              let caja = document.createElement('div');
+              caja.style.zIndex = '2000';
+              caja.style.width = '30em';
+              caja.style.height = '30em';
+              caja.style.backgroundColor = '#f0f5f6';
+              let titleDetail = event.target.parentNode.firstChild.textContent;
+              caja.appendChild(document.createElement('p').appendChild(document.createTextNode(titleDetail)))
+  
+              let buttonClouse = document.createElement('button');
+              buttonClouse.textContent = 'Cerrar';
+              caja.appendChild(buttonClouse);
+              let boxx = document.querySelector('.boxx');
+              boxx.appendChild(caja)
+             
+  
+              container.style.display = 'none';
+              buttonClouse.addEventListener('click', function(){
+                container.style.display = 'flex';
+                boxx.style.display = 'none';
+                location.reload();
   
   
+  
+              })
+  
+  
+  
+  
+              
+            })
+         
   
             box.appendChild(button);
             container.appendChild(box)
